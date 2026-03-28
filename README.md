@@ -1,4 +1,4 @@
-# COMP1549 Coursework - Task 1
+# Java Distributed-Messaging System
 
 Java CLI group communication system built with a client-server architecture.
 
