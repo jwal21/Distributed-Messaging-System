@@ -16,21 +16,21 @@ Java CLI group communication system built with a client-server architecture.
 
 ### Compile
 
-```powershell
-New-Item -ItemType Directory -Force bin
-javac -d bin (Get-ChildItem -Recurse src -Filter *.java | ForEach-Object { $_.FullName })
+```bash
+mkdir -p bin
+find src -name "*.java" -print0 | xargs -0 javac -d bin
 ```
 
 ### Run server
 
-```powershell
-java -cp bin uk.ac.greenwich.comp1549.task1.Main
+```bash
+java -cp bin Main
 ```
 
 ### Run client
 
-```powershell
-java -cp bin uk.ac.greenwich.comp1549.task1.client.ClientMain 4027 3000 60000
+```bash
+java -cp bin client.ClientMain <serverPort> <messageDelayMs> <leaveDelayMs>
 ```
 
 Client arguments:
